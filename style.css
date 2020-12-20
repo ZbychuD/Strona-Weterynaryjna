@@ -78,10 +78,16 @@ nav.mobile {
 }
 button.mobile__openMenu {
   margin: 10px;
-  font-size: 14px;
+  font-size: 25px;
   padding: 10px;
   position: fixed;
+  border-style: none;
+  background-color: transparent;
   z-index: 2;
+}
+button.mobile__openMenu.active {
+  color: white;
+  transform: rotate(90deg);
 }
 div.mobile__menu {
   position: fixed;

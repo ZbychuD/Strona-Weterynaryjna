@@ -3,6 +3,7 @@ const animItems = [...document.querySelectorAll(".anim__item")];
 const menuButton = document.querySelector(".mobile__openMenu");
 const mobileMenu = document.querySelector(".mobile__menu");
 const mobileLinks = document.querySelectorAll(".mobile__link");
+const burger = document.querySelector(".fa-bars");
 
 const btn = document.querySelector(".galery__showMore");
 const section = document.querySelector(".galery");
@@ -58,16 +59,17 @@ let active = true;
 menuButton.addEventListener("click", () => {
   if (active === true) {
     mobileMenu.style.left = "0";
+    menuButton.classList.add("active");
     active = !active;
   } else {
     mobileMenu.style.left = "-100%";
+    menuButton.classList.remove("active");
     active = !active;
   }
 });
 
 mobileLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    console.log(link);
     mobileMenu.style.left = "-100%";
     active = true;
   });
